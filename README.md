@@ -6,7 +6,6 @@ A full-stack real-time chat application inspired by Discord and WhatsApp.
 - Real-time messaging
 - Group chats
 - Voice & Video calling (WebRTC)
-- Neonic/Cyberpunk UI
 
 ## Structure
 - `/client`: Next.js 14 Frontend
