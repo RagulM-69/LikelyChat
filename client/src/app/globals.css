@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 50% 4%;
+    /* #030014 Deep Cosmic */
+    --foreground: 210 40% 98%;
+
+    --card: 260 50% 6%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 260 50% 6%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 250 80% 65%;
+    /* Soft Electric Indigo */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 250 80% 65%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 250 80% 65%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cosmic-950 text-foreground selection:bg-cosmic-500/30 selection:text-white;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="24">👺</text></svg>') 16 16, auto;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  .cursor-pointer {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="24">👹</text></svg>') 16 16, pointer !important;
+  }
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  @apply bg-black/30 backdrop-blur-xl border border-white/10 shadow-lg;
+}
+
+.glass-card {
+  @apply bg-[#110c2d]/60 backdrop-blur-2xl border border-white/5 shadow-xl;
+}
+
+.neon-glow {
+  box-shadow: 0 0 20px -5px theme('colors.cosmic.500');
+}
+
+.neon-text-glow {
+  text-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
